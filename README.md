@@ -25,15 +25,17 @@ The problems are categorized into the following patterns:
 5. **Binary Search**
 6. **Linked List**
 7. **Trees**
-8. **Tries**
 9. **Heap / Priority Queue**
 10. **Backtracking**
-11. **Graphs**
-12. **Dynamic Programming**
-13. **Greedy**
-14. **Intervals**
-15. **Math & Geometry**
-16. **Bit Manipulation**
+11. **Tries**
+12. **Graphs**
+13. **Advanced Graphs**
+14. **1-D Dynamic Programming**
+15. **2-D Dynamic Programming**
+16. **Greedy**
+17. **Intervals**
+18. **Math & Geometry**
+19. **Bit Manipulation**
 
 ## How to Use This Repository
 
