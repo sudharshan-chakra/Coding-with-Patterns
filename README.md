@@ -41,17 +41,17 @@ The problems are categorized into the following patterns:
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/your-username/leetcode-patterns.git
+    git clone https://github.com/your-username/coding-with-patterns.git
     ```
 2. **Navigate to a Pattern Directory:**
     Each pattern has its own directory with problem solutions.
     ```bash
-    cd leetcode-patterns/pattern-name
+    cd coding-with-patterns/<pattern-name>
     ```
 3. **Read the Solutions:**
-    Each problem has a solution file with detailed explanations.
+    Each problem has a solution file
     ```bash
-    cat problem-name.md
+    cat problem-name.py
     ```
 
 ## License
