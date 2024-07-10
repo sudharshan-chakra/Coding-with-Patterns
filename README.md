@@ -1,4 +1,4 @@
-# Coding-with-Patterns
+# Coding with Patterns
 A comprehensive repository of organized patterns and solutions for coding problems. This repository aims to help programmers view and review coding interviews by providing well-structured solutions, detailed explanations, and categorized patterns for common algorithmic problems. 
 
 Welcome to the Coding with Patterns repository! This repository is designed to help you improve your problem-solving skills and prepare for coding interviews by providing organized solutions to coding problems. Each solution is categorized based on common algorithmic patterns.
