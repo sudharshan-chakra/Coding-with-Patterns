@@ -1,20 +1,14 @@
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        l,r = 0,0
+        smallest = float('inf')
+        l = 0
         window_sum = 0
-        shortest = float('inf')
 
-        while r < len(nums):
-            window_sum += nums[r]
-            r += 1
-    
-            while r < len(nums) and window_sum < target:
-                window_sum += nums[r]
-                r += 1
-
+        for r, val in enumerate(nums):
+            window_sum += val
             while window_sum >= target:
-                shortest = min(shortest, r-l)
+                smallest = min(smallest, r-l+1)
                 window_sum -= nums[l]
                 l += 1
 
-        return shortest if shortest != float('inf') else 0
+        return 0 if smallest == float('inf') else smallest
