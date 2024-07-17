@@ -9,7 +9,6 @@ class Solution:
             for p in piles:
                 hours += math.ceil(p/mid)
             
-            print(mid)
             if hours <= h:
                 min_hours = mid
                 r = mid - 1
