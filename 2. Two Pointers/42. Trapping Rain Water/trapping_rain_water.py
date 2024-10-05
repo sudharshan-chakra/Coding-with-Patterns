@@ -1,23 +1,19 @@
 class Solution:
     def trap(self, height: List[int]) -> int:
         length = len(height)
-        maxL = [0] * length
-        maxR = [0] * length
-
-        maxl = 0
-        for i in range(1,length):
-            maxl = max(height[i-1],maxl)
-            maxL[i] = maxl
-        
-        maxr = 0
-        for i in range(length-2,-1,-1):
-            maxr = max(height[i+1],maxr)
-            maxR[i] = maxr
-        
+        maxL, maxR = 0,0
         count = 0
-        for i in range(length):
-            val = min(maxL[i],maxR[i]) - height[i]
-            if val > 0:
-                count += val
-        
+        l,r = 0,length-1
+
+        while l <= r:
+            if maxL <= maxR:
+                val = maxL - height[l]
+                count += val if val > 0 else 0
+                maxL = max(maxL,height[l])
+                l += 1
+            else:
+                val = maxR - height[r]
+                count += val if val > 0 else 0
+                maxR = max(maxR,height[r])
+                r -= 1
         return count
