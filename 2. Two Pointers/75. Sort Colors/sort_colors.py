@@ -3,26 +3,16 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        
-        z,o,t = 0,0,0
-
-        for num in nums:
-            if num == 0: z += 1
-            elif num == 1: o += 1
-            else: t += 1
-        
+        length = len(nums)
+        l,r = 0,length-1
         i = 0
-        while z > 0:
-            nums[i] = 0
-            z -= 1
-            i += 1
-        
-        while o > 0:
-            nums[i] = 1
-            o -= 1
-            i += 1
-        
-        while t > 0:
-            nums[i] = 2
-            t -= 1
+
+        while i <= r:
+            if nums[i] == 2:
+                nums[i], nums[r] = nums[r], nums[i]
+                i -= 1
+                r -= 1
+            elif nums[i] == 0:
+                nums[i], nums[l] = nums[l], nums[i]
+                l += 1
             i += 1
