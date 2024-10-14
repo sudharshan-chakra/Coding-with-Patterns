@@ -1,15 +1,15 @@
 class Solution:
     def minLength(self, s: str) -> int:
-        length = len(s)
+        stack = []
 
-        while True:
-            isPresent = False
+        for i, ch in enumerate(s):
+            if not stack:
+                stack.append(ch)
+                continue
 
-            for i in range(1,length):
-                if s[i-1:i+1] in ["AB","CD"]:
-                    isPresent = True
-                    s = s[:i-1] + s[i+1:]
-                    break
-
-            if not isPresent:
-                return len(s)
+            if stack[-1] + ch in ["AB", "CD"]:
+                stack.pop()
+            else:
+                stack.append(ch)
+        
+        return len(stack)
