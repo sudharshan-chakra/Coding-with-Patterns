@@ -2,20 +2,18 @@ from collections import defaultdict
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         counter = defaultdict(int)
-        l = 0
+        l,r = 0,0
         length = len(s)
-        maxf = 0
         longest = 0
+        maxf = 0
 
-        for r in range(length):
+        while r < length:
             counter[s[r]] += 1
-            maxf = max(maxf, counter[s[r]])
-
-            if (r-l+1) - maxf <= k:
-                longest = max(longest,r-l+1)
-
-            while (r-l+1) - maxf > k:
+            maxf = max(maxf, counter[s[r]])  
+            while (r-l+1) - max(counter.values()) > k:
                 counter[s[l]] -= 1
                 l += 1
+            longest = max(longest,r-l+1)
+            r += 1
 
         return longest
